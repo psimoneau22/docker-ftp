@@ -1,0 +1,14 @@
+version: "3.2"
+services:
+  ftp:
+    build: .
+    ports:
+      - "21:21"
+      - "8000-8010:8000-8010"
+    volumes:
+      - type: bind
+        source: ./vsftpd.conf
+        target: /etc/vsftpd.conf
+      - type: bind
+        source: ./home
+        target: /home
