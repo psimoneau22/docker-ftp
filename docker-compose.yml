@@ -10,5 +10,5 @@ services:
         source: ./vsftpd.conf
         target: /etc/vsftpd.conf
       - type: bind
-        source: ./home
+        source: /media/pi/Lexar1/data/ftp
         target: /home
